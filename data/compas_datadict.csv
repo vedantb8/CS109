@@ -1,0 +1,25 @@
+﻿Variable,Description
+,
+Age,Defendant's age in years
+c_charge_degree,"The type of crime a defendant has been charged with, either M (misdemeanor, less serious) or F (felony, more serious)"
+c_charge_desc,Specific text field with type of charge. We have also created a few extra variables derived from this field.
+race,Defendant's race (categorical)
+score_text,Low/Medium/High score category from COMPAS
+sex,Defendant biological sex (Male/Female)
+priors_count,Count for number of prior times a defendant has been charged
+juv_fel_count,Count for number of times a defendant was charged with a felony as a juvenile
+juv_misd_count,Count for number of times a defendant was charged with a misdemeanor as a juvenile
+juv_other_count,Count for number of times a defendant was charged with something else as a juvenile
+decile_score,1-10 COMPAS score based on decile
+two_year_recid,OUTCOME VARIABLE: whether or not defendant recidivated within 2 years
+length_of_stay,How long between when a defendant was charged and when they were released 
+priors_1 ,"Indicator variable derived from priors_count, 1 if priors_count=1, 0 otherwise"
+priors_234,"Indicator variable derived from priors_count, 1 if priors_count is 2, 3, 4; 0 otherwise"
+priors_5plus,"Indicator variable derived from priors_count, 1 if priors_count=5 or more, 0 otherwise"
+juv_fel_1plus,"Indicator variable derived from juv_fel_count, 1 if juv_fel_count, is 1 or more; 0 otherwise"
+juv_misd_1plus,"Indicator variable derived from juv_misd_count, 1 if juv_misd_count, is 1 or more; 0 otherwise"
+juv_other_1plus,"Indicator variable derived from juv_other_count, 1 if juv_other_count, is 1 or more; 0 otherwise"
+charge_any_drug,"Indicator variable derived from c_charge_desc, indicating our best guess as to whether the crime charged was drug-related"
+charge_any_violence_aggression,"Indicator variable derived from c_charge_desc, indicating our best guess as to whether the crime charged was violence or aggression related"
+charge_any_theft,"Indicator variable derived from c_charge_desc, indicating our best guess as to whether the crime charged was theft or burglary related"
+length_of_stay_thresh,"Thresholded version of length_of_stay variable, where values above 30 have been capped at 30"
